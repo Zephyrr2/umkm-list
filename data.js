@@ -5,7 +5,7 @@
 //   kategori : kategori (contoh: Makanan, Fashion, Jasa, Kerajinan)
 //   alamat   : alamat lengkap
 //   lat, lng : koordinat Google Maps (ambil dari link share Maps)
-//   maps     : link Google Maps (format place_id atau link biasa)
+//   maps     : link Google Maps (link share biasa atau query koordinat lat,lng — hindari place_id:)
 // ============================================================
 
 const UMKM = [
@@ -16,7 +16,7 @@ const UMKM = [
     lat: -7.9343276,
     lng: 110.3662551,
     maps:
-      "https://www.google.com/maps/search/?api=1&query=place_id:ChIJl4nciBpVei4Rj4jD1pqQEq8",
+      "https://www.google.com/maps/search/?api=1&query=-7.9343276,110.3662551",
   },
   // Contoh entri kedua — tinggal salin blok di atas, hapus tanda //:
   // {
