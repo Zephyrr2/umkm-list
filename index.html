@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daftar UMKM</title>
+  <meta name="description" content="Daftar UMKM — klik untuk membuka lokasi di Google Maps." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏪</text></svg>" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <p class="eyebrow">UMKM</p>
+      <h1>Daftar UMKM</h1>
+      <p class="subtitle">Klik salah satu untuk membuka lokasinya di Google Maps.</p>
+
+      <div class="search-wrap">
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"></circle>
+          <line x1="16.5" y1="16.5" x2="21" y2="21"></line>
+        </svg>
+        <input id="search" type="search" placeholder="Cari nama / alamat UMKM…" autocomplete="off" aria-label="Cari UMKM" />
+      </div>
+
+      <div id="filters" class="chips" role="group" aria-label="Filter kategori"></div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <p id="count" class="count" aria-live="polite"></p>
+    <div id="list" class="grid"></div>
+    <div id="empty" class="empty" hidden>
+      <p>Tidak ada UMKM yang cocok dengan pencarianmu.</p>
+    </div>
+  </main>
+
+  <section class="qr-section">
+    <div class="wrap qr-inner">
+      <div class="qr-text">
+        <h2>Cetak QR</h2>
+        <p>Scan QR di samping untuk membuka halaman <strong>Daftar UMKM</strong> ini. Pas QR ini di poster, banner, atau kartu nama.</p>
+        <p id="qr-url" class="qr-url"></p>
+        <div class="qr-actions">
+          <button id="dl-png" class="btn btn-primary" type="button">Unduh PNG</button>
+          <button id="dl-svg" class="btn" type="button">Unduh SVG</button>
+        </div>
+        <p id="qr-note" class="qr-note" hidden></p>
+      </div>
+      <div class="qr-card">
+        <div id="qrcode" aria-label="QR code halaman ini"></div>
+        <p class="qr-caption">Daftar UMKM</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="wrap">
+      <p>Daftar UMKM · Klik kartu untuk menuju Google Maps</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcode-generator/1.4.4/qrcode.min.js"></script>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
